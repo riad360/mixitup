@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MixiTub</title>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+<style>
+	.mix img {
+  margin-bottom: 30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="text-center">MixiTup</h2>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="bal text-center">
+        <button type="button" class="con btn" data-filter="all">All</button>
+        <button type="button" class="con btn" data-filter=".green">Green</button>
+        <button type="button" class="con btn" data-filter=".yellow">Yellow</button>
+        <button type="button" class="con btn" data-filter=".pink">Pink</button>
+        <button type="button" class="con btn" data-filter=".blue">Blue</button>
+        <button type="button" class="con btn" data-filter=".orange">Orange</button>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mixitupContainer">
+          <div class="col-lg-4 col-md-6 col-sm-6 mix all">
+              <img src="img/1.jpg" class="img-responsive center-block">
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 mix green pink orange">
+              <img src="img/2.jpg" class="img-responsive center-block">
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 mix green yellow blue">
+              <img src="img/3.jpg" class="img-responsive center-block">
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 mix green yellow pink">
+              <img src="img/4.jpg" class="img-responsive center-block">
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 mix green yellow blue">
+              <img src="img/5.jpg" class="img-responsive center-block">
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 mix green yellow pink">
+              <img src="img/6.jpg" class="img-responsive center-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://demos.kunkalabs.com/mixitup/mixitup.min.js"></script>
+
+<script>
+	var containerEl = document.querySelector('.mixitupContainer');
+	var mixer = mixitup(containerEl, {
+	  	controls: {
+	    	toggleLogic: 'and'
+	  	},
+
+	  	animation: {
+	    	effects: 'fade',
+	    	duration: 200,
+	    	nudge: false,
+	    	reverseOut: false
+	  	}
+	});
+</script>
+
+	
+</body>
+</html>
